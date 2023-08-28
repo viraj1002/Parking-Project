@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment QR Code</title>
+</head>
+<body>
+    <h1>Make a Payment</h1>
+    <div id="qrcode"></div>
+
+    <script src="qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const qrcodeContainer = document.getElementById('qrcode');
+    
+        // Replace with your payment details or URL
+        const paymentDetails = 'https://yourpaymentprovider.com/pay?amount=50&invoice=12345';
+    
+        if (paymentDetails.trim() !== '') {
+            const qrcode = new QRCode(qrcodeContainer, {
+                text: paymentDetails,
+                width: 256,
+                height: 256,
+            });
+        }
+    });
+    </script>
+</body>
+</html>

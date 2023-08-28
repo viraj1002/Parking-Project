@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smart Parking App - Home</title>
+    <style>
+        /* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-item {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #555;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.homepage-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homepage-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.homepage-container p {
+    font-size: 18px;
+    color: #555;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="admin_login.html" class="nav-item">Login</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Help</a>
+        </div>
+    </nav>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vp8pYGACxuJOO7AripAhlsKyKQKOHz-cEw&usqp=CAU" alt="Image 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Gj2vULCo4rvm_akyH5UGGd7VoLsjqvZW-w&usqp=CAU" alt="Image 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5D1YErrzaFGHUyBKsdzN6-h39MzpQxkx5g&usqp=CAU" alt="Image 3">
+        </div>
+    </div>
+    <div class="homepage-container">
+        <h1>Welcome to Smart Parking App</h1>
+        <p>Experience convenient and hassle-free parking management.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
