@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="demo1.css">
+  
+  <title>Parking Allotment</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Parking Allotment</h2>
+    <form>
+      <label for="vehicle-number">Vehicle Number Plate:</label>
+      <input type="text" id="vehicle-number" name="vehicle-number" required>
+
+      <label for="vehicle-type">Vehicle Type:</label>
+      <select id="vehicle-type" name="vehicle-type" required>
+        <option value="car">Car</option>
+        <option value="bike">Bike</option>
+      </select>
+
+      <label for="in-time">In Time:</label>
+      <input type="time" id="in-time" name="in-time" required>
+
+      <h3>Payment Options:</h3>
+      <div class="payment-options">
+        <div class="payment-option" onclick="selectPayment('upi')">UPI</div>
+        <div class="payment-option" onclick="selectPayment('cards')">Cards</div>
+        <div class="payment-option" onclick="selectPayment('cash')">Cash</div>
+      </div>
+
+      <div id="payment-details"></div>
+
+      <button type="submit">Slot Allotted</button>
+    </form>
+  </div>
+  
+  <script>
+    let selectedPaymentOption = "";
+
+    function selectPayment(option) {
+      selectedPaymentOption = option;
+      const paymentDetailsDiv = document.getElementById("payment-details");
+      paymentDetailsDiv.innerHTML = `Selected Payment Option: ${option}`;
+    }
+
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const selectedVehicleType = document.querySelector("#vehicle-type").value;
+
+      if (selectedVehicleType === "car" || selectedVehicleType === "bike") {
+        selectPayment(selectedPaymentOption);
+      }
+    });
+  </script>
+</body>
+</html>

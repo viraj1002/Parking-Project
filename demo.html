@@ -3,149 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Smart Parking App - Home</title>
-    <style>
-        /* Reset some default styles */
-        body, h1, h2, h3, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
-
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        .nav-item {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        .nav-item:hover {
-            background-color: #555;
-        }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .slider-container {
-            width: 100%;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .slider {
-            display: flex;
-        }
-
-        .slider img {
-            width: 100%;
-            height: auto;
-        }
-
-        .homepage-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .homepage-container h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .homepage-container p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        @keyframes slide {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            33% {
-                transform: translateX(-100%);
-            }
-            66% {
-                transform: translateX(-200%);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="demo.css">
+    <title>Parking Admin Profile</title>
 </head>
 <body>
+    <header>
+        <h1>Parking Admin Dashboard</h1>
+    </header>
     <nav>
-        <div class="navbar">
-            <div class="dropdown">
-                <button class="dropbtn">Menu &#9662;</button>
-                <div class="dropdown-content">
-                    <a href="admin_login.html">Admin</a>
-                    <a href="user.html">Users</a>
-                    <a href="worker.html">Worker</a>
-                </div>
-            </div>
-            <a href="#" class="nav-item">About</a>
-            <a href="#" class="nav-item">Help</a>
-        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Manage Parking Lots</a></li>
+            <li><a href="#">Generate Reports</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
     </nav>
-    <div class="slider-container">
-        <div class="slider">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vp8pYGACxuJOO7AripAhlsKyKQKOHz-cEw&usqp=CAU" alt="Image 1">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Gj2vULCo4rvm_akyH5UGGd7VoLsjqvZW-w&usqp=CAU" alt="Image 2">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5D1YErrzaFGHUyBKsdzN6-h39MzpQxkx5g&usqp=CAU" alt="Image 3">
-        </div>
-    </div>
-    <div class="homepage-container">
-        <h1>Welcome to Smart Parking App</h1>
-        <p>Experience convenient and hassle-free parking management.</p>
-    </div>
-    <script src="script.js"></script>
+    <main>
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-card">
+                <h3>Total Revenue</h3>
+                <p>$10,000</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Available Spaces</h3>
+                <p>50</p>
+            </div>
+        </section>
+        <section class="management">
+            <h2>Manage Parking Lots</h2>
+            <!-- Add content related to parking lot management here -->
+        </section>
+        <section class="reports">
+            <h2>Generate Reports</h2>
+            <!-- Add content related to report generation here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Parking Project</p>
+    </footer>
 </body>
 </html>
